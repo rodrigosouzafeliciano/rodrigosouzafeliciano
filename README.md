@@ -17,7 +17,7 @@
 
 ### About me
 
-Frontend & Mobile Developer with 1 year of professional experience,
+Frontend & Mobile Developer with 3 year of professional experience,
 specializing in React, Next.js, TypeScript and React Native.
 
 I care deeply about **code quality**, **clean architecture** and
