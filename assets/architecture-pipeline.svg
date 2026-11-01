@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="100%" height="100%" role="img" aria-label="Full Stack Architecture Pipeline">
+  <defs>
+    <linearGradient id="bgPipe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#070B14"/>
+    </linearGradient>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="33%" stop-color="#818CF8"/>
+      <stop offset="66%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
+
+      @keyframes flowDash {
+        to { stroke-dashoffset: -40; }
+      }
+      @keyframes nodePulse {
+        0%, 100% { stroke-opacity: 0.5; }
+        50% { stroke-opacity: 1; }
+      }
+      .pipe-stream { stroke-dasharray: 8 8; animation: flowDash 1.4s linear infinite; }
+      .node-box { animation: nodePulse 3.5s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="240" rx="14" fill="url(#bgPipe)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Section Title -->
+  <text x="36" y="34" class="font-mono" font-size="11.5" font-weight="700" fill="#38BDF8" letter-spacing="1.5">
+    PRODUCTION ENGINEERING ARCHITECTURE · END-TO-END WORKFLOW (EN-US / PT-BR)
+  </text>
+  <text x="1164" y="34" text-anchor="end" class="font-mono" font-size="11" fill="#10B981">
+    ● ALL PIPELINES OPERATIONAL
+  </text>
+
+  <!-- Connecting Pipeline Track -->
+  <line x1="140" y1="125" x2="1060" y2="125" stroke="#1E293B" stroke-width="4"/>
+  <line class="pipe-stream" x1="140" y1="125" x2="1060" y2="125" stroke="url(#lineGrad)" stroke-width="2.5"/>
+
+  <!-- Stage 1: Client & UI -->
+  <g transform="translate(36, 58)">
+    <rect class="node-box" width="208" height="134" rx="10" fill="#0B1120" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="14" y="14" width="68" height="20" rx="4" fill="#0284C7" fill-opacity="0.2"/>
+    <text x="48" y="28" text-anchor="middle" class="font-mono" font-size="10" fill="#38BDF8" font-weight="700">STAGE 01</text>
+    <text x="14" y="54" class="font-sans" font-size="14.5" font-weight="700" fill="#F8FAFC">Client &amp; Mobile UI</text>
+    <text x="14" y="74" class="font-mono" font-size="11" fill="#94A3B8">React · Next.js · Vue.js</text>
+    <text x="14" y="92" class="font-mono" font-size="11" fill="#94A3B8">React Native · TypeScript</text>
+    <text x="14" y="114" class="font-sans" font-size="11" fill="#64748B">Responsive &amp; Accessible UX</text>
+  </g>
+
+  <!-- Stage 2: Edge & Security -->
+  <g transform="translate(274, 58)">
+    <rect class="node-box" width="208" height="134" rx="10" fill="#0B1120" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="14" y="14" width="68" height="20" rx="4" fill="#6366F1" fill-opacity="0.2"/>
+    <text x="48" y="28" text-anchor="middle" class="font-mono" font-size="10" fill="#818CF8" font-weight="700">STAGE 02</text>
+    <text x="14" y="54" class="font-sans" font-size="14.5" font-weight="700" fill="#F8FAFC">Edge &amp; API Security</text>
+    <text x="14" y="74" class="font-mono" font-size="11" fill="#94A3B8">Nginx Reverse Proxy · SSL</text>
+    <text x="14" y="92" class="font-mono" font-size="11" fill="#94A3B8">JWT · RBAC · Rate Limit</text>
+    <text x="14" y="114" class="font-sans" font-size="11" fill="#64748B">Input Validation &amp; Bcrypt</text>
+  </g>
+
+  <!-- Stage 3: Clean Architecture Core -->
+  <g transform="translate(512, 58)">
+    <rect class="node-box" width="208" height="134" rx="10" fill="#0B1120" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="14" y="14" width="68" height="20" rx="4" fill="#10B981" fill-opacity="0.2"/>
+    <text x="48" y="28" text-anchor="middle" class="font-mono" font-size="10" fill="#34D399" font-weight="700">STAGE 03</text>
+    <text x="14" y="54" class="font-sans" font-size="14.5" font-weight="700" fill="#F8FAFC">Clean Architecture</text>
+    <text x="14" y="74" class="font-mono" font-size="11" fill="#94A3B8">Node.js · Koa · Express</text>
+    <text x="14" y="92" class="font-mono" font-size="11" fill="#94A3B8">Awilix DI · 23+ REST APIs</text>
+    <text x="14" y="114" class="font-sans" font-size="11" fill="#64748B">Domain-Driven Decoupling</text>
+  </g>
+
+  <!-- Stage 4: Data & Realtime -->
+  <g transform="translate(750, 58)">
+    <rect class="node-box" width="208" height="134" rx="10" fill="#0B1120" stroke="#F43F5E" stroke-width="1.5"/>
+    <rect x="14" y="14" width="68" height="20" rx="4" fill="#F43F5E" fill-opacity="0.2"/>
+    <text x="48" y="28" text-anchor="middle" class="font-mono" font-size="10" fill="#FB7185" font-weight="700">STAGE 04</text>
+    <text x="14" y="54" class="font-sans" font-size="14.5" font-weight="700" fill="#F8FAFC">Data &amp; Real-Time</text>
+    <text x="14" y="74" class="font-mono" font-size="11" fill="#94A3B8">PostgreSQL 14+ · SQL</text>
+    <text x="14" y="92" class="font-mono" font-size="11" fill="#94A3B8">Redis 7 Cache · Socket.IO</text>
+    <text x="14" y="114" class="font-sans" font-size="11" fill="#64748B">Live GPS Telemetry Engine</text>
+  </g>
+
+  <!-- Stage 5: QA, Docker & Observability -->
+  <g transform="translate(988, 58)">
+    <rect class="node-box" width="176" height="134" rx="10" fill="#0B1120" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="14" y="14" width="68" height="20" rx="4" fill="#F59E0B" fill-opacity="0.2"/>
+    <text x="48" y="28" text-anchor="middle" class="font-mono" font-size="10" fill="#FBBF24" font-weight="700">STAGE 05</text>
+    <text x="14" y="54" class="font-sans" font-size="14.5" font-weight="700" fill="#F8FAFC">QA &amp; DevOps</text>
+    <text x="14" y="74" class="font-mono" font-size="11" fill="#94A3B8">Docker Compose</text>
+    <text x="14" y="92" class="font-mono" font-size="11" fill="#94A3B8">Prometheus/Grafana</text>
+    <text x="14" y="114" class="font-sans" font-size="11" fill="#64748B">Regression QA Suites</text>
+  </g>
+
+  <!-- Bottom Caption -->
+  <text x="600" y="218" text-anchor="middle" class="font-mono" font-size="11" fill="#64748B">
+    Every release is validated through functional &amp; regression test matrices, containerized for parity, and monitored in real time.
+  </text>
+</svg>
