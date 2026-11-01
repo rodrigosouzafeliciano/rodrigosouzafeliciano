@@ -1,205 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" role="img" aria-label="Rodrigo Souza Feliciano - Full Stack Software Developer">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Rodrigo Souza Feliciano, Full Stack Software Developer and QA Analyst</title>
+  <desc id="desc">Open to remote roles. Laguna, Brazil (UTC-3). Portuguese native, English B2+.</desc>
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060911"/>
-      <stop offset="50%" stop-color="#0B1120"/>
-      <stop offset="100%" stop-color="#090D16"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#0E1A2F"/>
     </linearGradient>
-
-    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#818CF8"/>
-      <stop offset="100%" stop-color="#34D399"/>
-    </linearGradient>
-
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.9"/>
-    </linearGradient>
-
-    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
     </radialGradient>
-
-    <radialGradient id="glowEmerald" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
-    </radialGradient>
-
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.7" stroke-opacity="0.55"/>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#1E293B"/>
     </pattern>
-
-    <style>
-      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-      .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
-
-      @keyframes pulseGlow {
-        0%, 100% { opacity: 0.45; transform: scale(1); }
-        50% { opacity: 0.85; transform: scale(1.06); }
-      }
-      @keyframes radarSweep {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      @keyframes blinkCursor {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-      @keyframes floatSlow {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-      }
-      @keyframes floatDelayed {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(5px); }
-      }
-      @keyframes dashFlow {
-        to { stroke-dashoffset: -48; }
-      }
-      @keyframes statusPulse {
-        0%, 100% { r: 4.5px; opacity: 1; }
-        50% { r: 6.5px; opacity: 0.55; }
-      }
-
-      .glow-orb-1 { animation: pulseGlow 7s ease-in-out infinite; transform-origin: 240px 160px; }
-      .glow-orb-2 { animation: pulseGlow 9s ease-in-out infinite; transform-origin: 960px 180px; }
-      .radar-ring { animation: radarSweep 14s linear infinite; transform-origin: 980px 180px; }
-      .cursor { animation: blinkCursor 1.1s steps(2) infinite; }
-      .float-1 { animation: floatSlow 5s ease-in-out infinite; }
-      .float-2 { animation: floatDelayed 6s ease-in-out infinite; }
-      .data-line { stroke-dasharray: 6 6; animation: dashFlow 2.2s linear infinite; }
-      .live-dot { animation: statusPulse 2s ease-in-out infinite; }
-    </style>
   </defs>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
 
-  <!-- Background -->
-  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)"/>
-  <rect width="1200" height="360" rx="16" fill="url(#grid)"/>
+    /* Entrance: base state is fully visible, so the banner stays readable when motion is off. */
+    .in { animation: rise 0.8s cubic-bezier(0.23, 1, 0.32, 1) both; }
+    .d1 { animation-delay: 0.10s; } .d2 { animation-delay: 0.22s; }
+    .d3 { animation-delay: 0.34s; } .d4 { animation-delay: 0.46s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-  <!-- Ambient Glows -->
-  <circle class="glow-orb-1" cx="240" cy="160" r="240" fill="url(#glowCyan)"/>
-  <circle class="glow-orb-2" cx="960" cy="180" r="220" fill="url(#glowEmerald)"/>
+    /* Terminal: 12 s loop. Command types, checks appear one by one, then everything resets. */
+    .cover  { transform: translateX(133px); animation: type 12s infinite; }
+    .cursor { transform: translateX(133px); animation: type 12s infinite; }
+    @keyframes type {
+      0%, 5%  { transform: translateX(0); animation-timing-function: steps(17, end); }
+      17%     { transform: translateX(133px); animation-timing-function: linear; }
+      93%     { transform: translateX(133px); animation-timing-function: steps(17, end); }
+      99%, 100% { transform: translateX(0); }
+    }
+    .blink { animation: blink 1s steps(1, end) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
 
-  <!-- Outer Frame Border -->
-  <rect x="1.5" y="1.5" width="1197" height="357" rx="15" fill="none" stroke="#1E293B" stroke-width="1.5"/>
-  <rect x="0" y="0" width="1200" height="3" rx="1.5" fill="url(#cyanAccent)"/>
+    .o1 { animation: o1 12s infinite; } .o2 { animation: o2 12s infinite; }
+    .o3 { animation: o3 12s infinite; } .o4 { animation: o4 12s infinite; }
+    .o5 { animation: o5 12s infinite; }
+    @keyframes o1 { 0%, 20%   { opacity: 0; transform: translateY(4px); } 23%, 92% { opacity: 1; transform: translateY(0); } 96%, 100% { opacity: 0; } }
+    @keyframes o2 { 0%, 27%   { opacity: 0; transform: translateY(4px); } 30%, 92% { opacity: 1; transform: translateY(0); } 96%, 100% { opacity: 0; } }
+    @keyframes o3 { 0%, 34%   { opacity: 0; transform: translateY(4px); } 37%, 92% { opacity: 1; transform: translateY(0); } 96%, 100% { opacity: 0; } }
+    @keyframes o4 { 0%, 41%   { opacity: 0; transform: translateY(4px); } 44%, 92% { opacity: 1; transform: translateY(0); } 96%, 100% { opacity: 0; } }
+    @keyframes o5 { 0%, 50%   { opacity: 0; transform: translateY(4px); } 54%, 92% { opacity: 1; transform: translateY(0); } 96%, 100% { opacity: 0; } }
 
-  <!-- Top Telemetry Bar -->
-  <g transform="translate(48, 28)">
-    <rect x="0" y="0" width="290" height="28" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
-    <circle class="live-dot" cx="16" cy="14" r="4.5" fill="#10B981"/>
-    <text x="30" y="18" class="font-mono" font-size="11.5" fill="#94A3B8" letter-spacing="0.6">AVAILABLE FOR REMOTE WORK · UTC-3</text>
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
 
-    <rect x="304" y="0" width="186" height="28" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
-    <text x="320" y="18" class="font-mono" font-size="11.5" fill="#38BDF8" letter-spacing="0.5">EN-US / PT-BR BILINGUAL</text>
+  <!-- Canvas -->
+  <rect width="1200" height="340" rx="16" fill="url(#bg)"/>
+  <rect x="0" y="0" width="700" height="340" rx="16" fill="url(#dots)" opacity="0.7"/>
+  <circle cx="958" cy="170" r="260" fill="url(#glow)"/>
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="15.5" fill="none" stroke="#1E293B"/>
+
+  <!-- Left: identity -->
+  <g class="in">
+    <rect x="64" y="58" width="276" height="28" rx="14" fill="#0F172A" stroke="#1E3A4C"/>
+    <circle cx="82" cy="72" r="4" fill="#22C55E">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="82" cy="72" r="4" fill="none" stroke="#22C55E" stroke-width="1.5">
+      <animate attributeName="r" values="4;11" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="96" y="76.5" class="mono" font-size="12" letter-spacing="1" fill="#CBD5E1">OPEN TO REMOTE ROLES · UTC-3</text>
   </g>
 
-  <!-- Left Column: Identity & Value Proposition -->
-  <g transform="translate(48, 92)">
-    <text x="0" y="0" class="font-mono" font-size="13" fill="#38BDF8" letter-spacing="1.8" font-weight="600">
-      $ whoami --role="full-stack-engineer"
-    </text>
+  <text x="62" y="148" class="sans in d1" font-size="46" font-weight="700" fill="#F8FAFC">Rodrigo Souza Feliciano</text>
+  <text x="64" y="186" class="sans in d2" font-size="21" font-weight="600" fill="#38BDF8">Full Stack Software Developer · QA Analyst</text>
 
-    <text x="0" y="48" class="font-sans" font-size="42" font-weight="800" fill="#F8FAFC" letter-spacing="-0.8">
-      Rodrigo Souza Feliciano
-    </text>
-
-    <text x="0" y="84" class="font-sans" font-size="19" font-weight="600" fill="url(#cyanAccent)">
-      Full Stack Software Developer · Clean Architecture &amp; QA Engineering
-    </text>
-
-    <text x="0" y="118" class="font-sans" font-size="14.5" fill="#94A3B8">
-      Building production web &amp; mobile applications, real-time telemetry backends, and zero-defect releases.
-    </text>
-    <text x="0" y="140" class="font-sans" font-size="14.5" fill="#64748B">
-      Desenvolvedor Full Stack focado em sistemas escaláveis, arquitetura limpa, tempo real e qualidade de software.
-    </text>
-
-    <!-- Key Stack Pills -->
-    <g transform="translate(0, 168)">
-      <g transform="translate(0, 0)">
-        <rect width="102" height="30" rx="6" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.45"/>
-        <text x="51" y="19" text-anchor="middle" class="font-mono" font-size="12" fill="#E2E8F0" font-weight="600">TypeScript</text>
-      </g>
-      <g transform="translate(112, 0)">
-        <rect width="124" height="30" rx="6" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.45"/>
-        <text x="62" y="19" text-anchor="middle" class="font-mono" font-size="12" fill="#E2E8F0" font-weight="600">React / Next.js</text>
-      </g>
-      <g transform="translate(246, 0)">
-        <rect width="118" height="30" rx="6" fill="#0F172A" stroke="#34D399" stroke-opacity="0.45"/>
-        <text x="59" y="19" text-anchor="middle" class="font-mono" font-size="12" fill="#E2E8F0" font-weight="600">Node.js / Koa</text>
-      </g>
-      <g transform="translate(374, 0)">
-        <rect width="106" height="30" rx="6" fill="#0F172A" stroke="#818CF8" stroke-opacity="0.45"/>
-        <text x="53" y="19" text-anchor="middle" class="font-mono" font-size="12" fill="#E2E8F0" font-weight="600">PostgreSQL</text>
-      </g>
-      <g transform="translate(490, 0)">
-        <rect width="128" height="30" rx="6" fill="#0F172A" stroke="#F43F5E" stroke-opacity="0.45"/>
-        <text x="64" y="19" text-anchor="middle" class="font-mono" font-size="12" fill="#E2E8F0" font-weight="600">Redis + WS</text>
-      </g>
-      <g transform="translate(628, 0)">
-        <rect width="92" height="30" rx="6" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.45"/>
-        <text x="46" y="19" text-anchor="middle" class="font-mono" font-size="12" fill="#E2E8F0" font-weight="600">Docker</text>
-      </g>
-    </g>
-
-    <!-- Bottom Terminal Prompt -->
-    <g transform="translate(0, 224)">
-      <text x="0" y="0" class="font-mono" font-size="12.5" fill="#10B981">rodrigo@workstation:~/engineering$</text>
-      <text x="255" y="0" class="font-mono" font-size="12.5" fill="#E2E8F0">ship --clean-arch --zero-defect-qa --target=production</text>
-      <rect class="cursor" x="668" y="-11" width="8" height="14" fill="#38BDF8"/>
-    </g>
+  <g class="sans in d3" font-size="16" fill="#94A3B8">
+    <text x="64" y="226">I build web, mobile and real-time systems with React,</text>
+    <text x="64" y="250">Next.js, Node.js and PostgreSQL, with a QA mindset.</text>
   </g>
 
-  <!-- Right Column: Animated Telemetry & Architecture HUD -->
-  <g transform="translate(980, 180)">
-    <!-- Outer Radar Rings -->
-    <circle cx="0" cy="0" r="126" fill="none" stroke="#1E293B" stroke-width="1.2"/>
-    <circle cx="0" cy="0" r="92" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="4 4"/>
-    <circle cx="0" cy="0" r="56" fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="64" y="292" class="mono in d4" font-size="12" letter-spacing="0.5" fill="#64748B">Laguna, Brazil · Portuguese (native) · English (B2+)</text>
 
-    <!-- Rotating Radar Sweep -->
-    <g class="radar-ring">
-      <path d="M 0 0 L 126 0 A 126 126 0 0 1 89 89 Z" fill="url(#glowCyan)" opacity="0.5"/>
-      <line x1="0" y1="0" x2="126" y2="0" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.8"/>
-    </g>
+  <!-- Right: release terminal -->
+  <g class="in d2">
+    <rect x="780" y="44" width="356" height="252" rx="12" fill="#070D18" stroke="#1E293B"/>
+    <path d="M780 56 a12 12 0 0 1 12 -12 h332 a12 12 0 0 1 12 12 v18 h-356 z" fill="#0F172A"/>
+    <line x1="780" y1="74" x2="1136" y2="74" stroke="#1E293B"/>
+    <circle cx="800" cy="59" r="5" fill="#F87171"/>
+    <circle cx="817" cy="59" r="5" fill="#FBBF24"/>
+    <circle cx="834" cy="59" r="5" fill="#34D399"/>
+    <text x="958" y="63" text-anchor="middle" class="mono" font-size="11" fill="#64748B">~/rodrigo</text>
 
-    <!-- Connecting Animated Data Lines -->
-    <line class="data-line" x1="-95" y1="-65" x2="0" y2="0" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
-    <line class="data-line" x1="82" y1="-72" x2="0" y2="0" stroke="#34D399" stroke-width="1.2" stroke-opacity="0.6"/>
-    <line class="data-line" x1="-88" y1="74" x2="0" y2="0" stroke="#818CF8" stroke-width="1.2" stroke-opacity="0.6"/>
-    <line class="data-line" x1="78" y1="78" x2="0" y2="0" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <!-- Command line with typing effect -->
+    <text x="804" y="108" class="mono" font-size="13" fill="#38BDF8">$</text>
+    <text x="820" y="108" class="mono" font-size="13" fill="#E2E8F0" textLength="133" lengthAdjust="spacing">npm run release</text>
+    <rect class="cover" x="820" y="94" width="134" height="20" fill="#070D18"/>
+    <g class="cursor"><rect class="blink" x="821" y="96" width="7" height="15" fill="#38BDF8"/></g>
 
-    <!-- Center Core Node -->
-    <circle cx="0" cy="0" r="28" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
-    <text x="0" y="-3" text-anchor="middle" class="font-mono" font-size="10" font-weight="700" fill="#F8FAFC">CLEAN</text>
-    <text x="0" y="9" text-anchor="middle" class="font-mono" font-size="9" font-weight="600" fill="#38BDF8">ARCH</text>
-
-    <!-- Floating Telemetry Badges -->
-    <g class="float-1" transform="translate(-155, -96)">
-      <rect width="124" height="44" rx="8" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.5"/>
-      <text x="12" y="18" class="font-mono" font-size="10" fill="#38BDF8" font-weight="700">REST API + WS</text>
-      <text x="12" y="34" class="font-sans" font-size="11" fill="#E2E8F0">23+ Routes · Live</text>
-    </g>
-
-    <g class="float-2" transform="translate(36, -104)">
-      <rect width="128" height="44" rx="8" fill="url(#cardGrad)" stroke="#10B981" stroke-width="1" stroke-opacity="0.5"/>
-      <text x="12" y="18" class="font-mono" font-size="10" fill="#10B981" font-weight="700">QA &amp; RELIABILITY</text>
-      <text x="12" y="34" class="font-sans" font-size="11" fill="#E2E8F0">Zero-Defect Gate</text>
-    </g>
-
-    <g class="float-2" transform="translate(-158, 58)">
-      <rect width="128" height="44" rx="8" fill="url(#cardGrad)" stroke="#818CF8" stroke-width="1" stroke-opacity="0.5"/>
-      <text x="12" y="18" class="font-mono" font-size="10" fill="#818CF8" font-weight="700">DATA &amp; CACHE</text>
-      <text x="12" y="34" class="font-sans" font-size="11" fill="#E2E8F0">Postgres + Redis</text>
-    </g>
-
-    <g class="float-1" transform="translate(34, 62)">
-      <rect width="132" height="44" rx="8" fill="url(#cardGrad)" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.5"/>
-      <text x="12" y="18" class="font-mono" font-size="10" fill="#F59E0B" font-weight="700">OBSERVABILITY</text>
-      <text x="12" y="34" class="font-sans" font-size="11" fill="#E2E8F0">Docker + Grafana</text>
-    </g>
+    <!-- Output lines -->
+    <g class="o1"><g transform="translate(806 128)">
+      <path d="M0 6 l3.5 3.5 l7 -8" fill="none" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="20" y="10" class="mono" font-size="13" fill="#CBD5E1">lint and type check</text>
+    </g></g>
+    <g class="o2"><g transform="translate(806 152)">
+      <path d="M0 6 l3.5 3.5 l7 -8" fill="none" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="20" y="10" class="mono" font-size="13" fill="#CBD5E1">unit and integration tests</text>
+    </g></g>
+    <g class="o3"><g transform="translate(806 176)">
+      <path d="M0 6 l3.5 3.5 l7 -8" fill="none" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="20" y="10" class="mono" font-size="13" fill="#CBD5E1">regression suite</text>
+    </g></g>
+    <g class="o4"><g transform="translate(806 200)">
+      <path d="M0 6 l3.5 3.5 l7 -8" fill="none" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="20" y="10" class="mono" font-size="13" fill="#CBD5E1">docker image built</text>
+    </g></g>
+    <g class="o5"><g transform="translate(806 236)">
+      <rect x="-6" y="-8" width="320" height="30" rx="6" fill="#0C2233" stroke="#1E3A4C"/>
+      <text x="6" y="12" class="mono" font-size="13" fill="#38BDF8">→</text>
+      <text x="26" y="12" class="mono" font-size="13" fill="#E2E8F0">shipped to production</text>
+    </g></g>
   </g>
 </svg>
