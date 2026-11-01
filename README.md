@@ -17,7 +17,7 @@
   <a href="https://dynamitejobs.com/profile/YfM0PkscASa1FLcBRA9aVgBJxX62/rodrigo-souza-feliciano" target="_blank">
     <img src="https://img.shields.io/badge/Dynamite_Jobs-4F46E5?style=for-the-badge&logo=rocket&logoColor=white" alt="Dynamite Jobs" />
   </a>
-  <a href="https://www.workana.com/freelancer/rodrigosouzafeliciano" target="_blank">
+  <a href="https://www.workana.com/freelancer/74d3fb12657221480eee7f5aa54fcba5" target="_blank">
     <img src="https://img.shields.io/badge/Workana-0284C7?style=for-the-badge&logo=freelancer&logoColor=white" alt="Workana" />
   </a>
   <a href="mailto:rodrigo.souza.f3liciano@gmail.com">
